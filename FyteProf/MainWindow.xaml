@@ -1,0 +1,19 @@
+﻿<Window x:Class="FyteProf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FyteProf"
+        mc:Ignorable="d"
+        Title="Fight Prophet" Height="450" Width="800" >
+
+    <Grid>
+
+        <Button x:Name="HeavyWinButton" Content="Heavyweights" HorizontalAlignment="Center" Margin="187,326,164.6,28" VerticalAlignment="Center" Width="442" Click="HeavyWinButton_Click" Height="66"/>
+        <Button x:Name="MiddleWinButton" Content="Middleweights" HorizontalAlignment="Center" Margin="186,240,164.6,114" VerticalAlignment="Center" Width="443" Click="MiddleWinButton_Click" Height="66"/>
+        <Button x:Name="FeatherWinButton" Content="Featherweights" HorizontalAlignment="Center" Margin="187,61,164.6,293" VerticalAlignment="Center" Width="442" Click="FeatherWinButton_Click" Height="66"/>
+        <Button x:Name="LightWinButton" Content="Lightweights" HorizontalAlignment="Center" Margin="187,151,164.6,203" VerticalAlignment="Center" Width="442" Click="LightWinButton_Click" Height="66"/>
+
+    </Grid>
+
+</Window>
