@@ -71,16 +71,6 @@ namespace FyteProf
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-
-        {
-
-        }
-        private void MainWinButton_Click(object sender, RoutedEventArgs e)
-        {
-          
-        }
-
         private void MainWinButton_Click_1(object sender, RoutedEventArgs e)
         {
 

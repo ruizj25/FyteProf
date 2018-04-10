@@ -5,35 +5,42 @@ namespace FightScoreTester
 {
     using System.Collections.Generic;
     using FyteProf;
+    
 
     [TestClass]
     public class FightScoreTester
     {
 
-        public FighterClass fc = new FighterClass()
+        public FighterClass TestFighter = new FighterClass()
         {
             Rank = 1,
             Name = "Max Holloway",
-            Win = 30,
-            Loss = 10,
+            Win = 19,
+            Loss = 4,
             Knockouts = 9,
             Submissions = 2
         };
 
-        [TestMethod]
-        public void RankWeightTest()
+        public FighterClass TestFighter2 = new FighterClass()
         {
-            int a = 100;     
-            double b = fc.RankWeight();
-            Assert.AreEqual(a, b);
-        }
+            Rank = 2,
+            Name = "Brian Ortega",
+            Win = 14,
+            Loss = 0,
+            Knockouts = 3,
+            Submissions = 7
+        };
 
         [TestMethod]
-        public void ExpTest()
+        public void FightScore()
         {
-            var expMaybe = 60;
-            var realExp = fc.Experience();
-            Assert.AreEqual(expMaybe, realExp);
+         TestFighter.Score();
+         Console.WriteLine(TestFighter.FightScore);
+         
+            TestFighter2.Score();
+            Console.WriteLine(TestFighter2.FightScore);
         }
+
+ 
     }
 }

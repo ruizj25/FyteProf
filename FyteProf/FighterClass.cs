@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace FyteProf
 {
+    using System.Windows;
+
     public class FighterClass
-    {  
+    {
+
         public int Rank { get; set; }
         public string Name { get; set; }
         public int Win { get; set; }
@@ -16,16 +19,18 @@ namespace FyteProf
         public int Submissions { get; set; }
         public double FightScore => FinishRate() + RankWeight() + Experience() + WinPercent();
 
-        public int TotalFights()
+
+        private double TotalFights()
         {
             return Win + Loss;
         }
-        public double WinPercent()
+        private double WinPercent()
         {
-         
-            return Win / TotalFights() * 100;
+            double winPerc = Win / TotalFights() * 100;
+            return Convert.ToDouble(winPerc.ToString("N"));
+
         }
-        public double Experience()
+        private double Experience()
         {
            var expPoints = TotalFights() * 3.125;
             if (expPoints >= 100)
@@ -33,11 +38,11 @@ namespace FyteProf
                 var oldMan = TotalFights() - 32;
                 return 100 - (oldMan * 5);
             }
-           return expPoints;
+           return Convert.ToDouble(expPoints.ToString("N"));
 
         }
 
-        public double RankWeight()
+        private double RankWeight()
         {
             int rankWeight;
             switch (Rank)
@@ -64,14 +69,20 @@ namespace FyteProf
             return rankWeight;
         }
 
-        public double FinishRate()
+        private double FinishRate()
         {
-            var fin = Submissions + Knockouts;
-        
-            return TotalFights() / fin * 100;
+
+           var finRate = (Submissions + Knockouts) / TotalFights() * 100;
+            return Convert.ToDouble(finRate.ToString("N"));
         }
 
-     
+        public void Score()
+        {
+          Console.WriteLine(
+              $@"total fights = {TotalFights()} Win % = {WinPercent()} exp = {Experience()} 
+                rank points = {RankWeight()} and finishrate = {FinishRate()}");
+        
+        }
     }
 }
 

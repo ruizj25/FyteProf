@@ -33,7 +33,8 @@ namespace FyteProf
                 new FighterClass() { Rank = 7, Name = "Justin Gaethje", Win = 18, Loss = 1, Knockouts = 15, Submissions = 1 },
                 new FighterClass() { Rank = 8, Name = "Kevin Lee", Win = 16, Loss = 3, Knockouts = 1, Submissions = 8 },
                 new FighterClass() { Rank = 9, Name = "Nate Diaz", Win = 19, Loss = 11, Knockouts = 4, Submissions = 13 },
-                new FighterClass() { Rank = 10, Name = "Michael Chiesa", Win = 14, Loss = 3, Knockouts = 10, Submissions = 4 }
+                new FighterClass() { Rank = 10, Name = "Michael Chiesa", Win = 14, Loss = 3, Knockouts = 10, Submissions = 4 },
+                new FighterClass() {Rank = 11, Name = "Al Iaquinta", Win = 13, Loss = 3, Knockouts = 7, Submissions = 1}
             };
 
             FighterSelect.ItemsSource = lights;
