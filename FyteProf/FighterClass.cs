@@ -11,6 +11,8 @@ namespace FyteProf
     public class FighterClass
     {
 
+        //Here is Shanes changes!!
+
         public int Rank { get; set; }
         public string Name { get; set; }
         public int Win { get; set; }
