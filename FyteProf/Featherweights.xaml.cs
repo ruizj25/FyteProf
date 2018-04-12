@@ -1,10 +1,10 @@
-﻿using System;
+// Do you need all of these? 
+// What happens if I remove one or two...
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -18,6 +18,8 @@ namespace FyteProf
     /// <summary>
     /// Interaction logic for Featherweights.xaml
     /// </summary>
+    
+    // What does this partial keyword mean? 
     public partial class Featherweights : Window
     {
       
@@ -118,6 +120,7 @@ namespace FyteProf
             if (firstFighterNotSelected || secondFighterNotSelected)
             {
 
+                // naming: what is case 1?
                 bool case1 = firstFighterNotSelected;
                 bool case2 = secondFighterNotSelected;
 
@@ -192,7 +195,7 @@ namespace FyteProf
             catch (NullReferenceException)
 
             {
-
+                // What do you need to do with this exception? 
             }
         }
     }
