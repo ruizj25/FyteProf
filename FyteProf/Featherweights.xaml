@@ -11,7 +11,14 @@
             <ColumnDefinition Width="603*"/>
             <ColumnDefinition Width="191*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="FighterSelect" HorizontalAlignment="Left" Margin="42,167,0,0" VerticalAlignment="Top" Width="286" Height="24" SelectionChanged="FighterSelect_SelectionChanged"/>
+        <!-- This format makes reading xaml a LOT easier. Up to you how to write it though -->
+        <ComboBox x:Name"FighterSelect"
+                  HorizontalAlignment="Left"
+                  Margin="42,167,0,0"
+                  VerticalAlignment="Top"
+                  Width="286"
+                  Height="24"
+                  SelectionChanged="FighterSelect_SelectionChanged" />
         <TextBox x:Name="FighterInfoBox" Height="20" Margin="120,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" HorizontalAlignment="Left"/>
         <TextBox x:Name="RankBox" Height="20" Margin="120,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" HorizontalAlignment="Left"/>
         <TextBox x:Name="FinishBox" Height="20" Margin="120,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" HorizontalAlignment="Left"/>
@@ -28,7 +35,7 @@
         <Button x:Name="MainWinButton" Content="Main Menu" Grid.Column="1" HorizontalAlignment="Left" Margin="60.6,64,0,0" VerticalAlignment="Top" Width="75" Click="MainWinButton_Click_1"/>
         <TextBlock x:Name="ScoreLabel" HorizontalAlignment="Left" Margin="150,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Fighter Score"/>
         <TextBox x:Name="ScoreBox" HorizontalAlignment="Left" Height="20" Margin="231,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-        <TextBlock x:Name="ScoreLabel1" HorizontalAlignment="Left" Margin="567,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Fighter Score" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="PracticeGoodNamingHabits" HorizontalAlignment="Left" Margin="567,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Fighter Score" Grid.ColumnSpan="2"/>
         <TextBox x:Name="ScoreBox1" HorizontalAlignment="Left" Height="20" Margin="45.6,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
         <Button x:Name="FightButton"  Content="FIGHT!" HorizontalAlignment="Left" Margin="236,376,0,0" VerticalAlignment="Top" Width="414" RenderTransformOrigin="1.511,0.132" Grid.ColumnSpan="2" Height="20" Click="FightButton_Click"/>
 
