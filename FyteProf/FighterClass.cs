@@ -20,19 +20,27 @@ namespace FyteProf
         public int Loss { get; set; }
         public int Knockouts { get; set; }
         public int Submissions { get; set; }
+        // Why is this a lambda? why not a regular method?
         public double FightScore => FinishRate() + RankWeight() + Experience() + WinPercent();
 
 
+        // Practice good naming conventions with methods. They are 'verbs' and 'do stuff' 
+        // For example: private double GetTotalFights()
+        // If this was a property you could leave it as is
         private double TotalFights()
         {
             return Win + Loss;
         }
+        
+        // naming: GetWinPercent()
         private double WinPercent()
         {
             double winPerc = Win / TotalFights() * 100;
             return Convert.ToDouble(winPerc.ToString("N"));
 
         }
+        
+        // naming: GetCurrentExperience
         private double Experience()
         {
            var expPoints = TotalFights() * 3.125;
@@ -45,6 +53,8 @@ namespace FyteProf
 
         }
 
+        // SetRankWeight() or GetRankWeight()
+        // Is there a way to make this easier to read? 
         private double RankWeight()
         {
             int rankWeight;
@@ -81,6 +91,13 @@ namespace FyteProf
 
         public void Score()
         {
+            // this is personal preference, but its super hard to read this string
+            // at a first glance. Maybe set the variables outside the string
+            
+            // private int fights = GetTotalFights();
+            // private int winRate = GetWinPercent();
+            // Console.WriteLine("Total fights: {fights}")
+            // Console.WriteLine("Win rate: {winRate}%")
           Console.WriteLine(
               $@"total fights = {TotalFights()} Win % = {WinPercent()} exp = {Experience()} 
                 rank points = {RankWeight()} and finishrate = {FinishRate()}");
